@@ -1,3 +1,3 @@
-import "./styles/tailwind.css";
+import "../styles/tailwind.scss";
 
 console.log("🐝 Bee Honey Landing loaded");
