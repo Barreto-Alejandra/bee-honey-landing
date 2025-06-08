@@ -6,6 +6,14 @@ module.exports = {
     "./public/index.html"
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '1.5rem',
+      screens: {
+        DEFAULT: '90%',
+        '2xl': '1500px',
+      },
+    },
     extend: {
       keyframes: {
         float: {
@@ -41,6 +49,26 @@ module.exports = {
         heading: ["'Playfair Display'", "serif"],
         body: ["'Inter'", "sans-serif"],
         cursive: ["'Pacifico'", "cursive"],
+      },
+      fontSize: {
+        title: [
+          'clamp(35px, 5vw, 60px)',
+          {
+            lineHeight: '1.2',
+          },
+        ],
+        body: [
+          'clamp(16px, 1.25vw, 18px)',
+          {
+            lineHeight: '1.6',
+          },
+        ],
+        'body-sm': [
+          'clamp(14px, 1vw, 16px)',
+          { 
+            lineHeight: '1.6' 
+          },
+        ],
       },
     },
   },

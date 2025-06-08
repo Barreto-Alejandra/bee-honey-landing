@@ -34,6 +34,14 @@ module.exports = {
         },
       },
       {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "postcss-loader",
+        ],
+      },
+      {
         test: /\.(sa|sc)ss$/,
         exclude: /node_modules/,
         use: [
@@ -44,7 +52,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|gif)$/i,
+        test: /\.(png|jpg|gif|svg)$/i,
         type: "asset",
       },
       {

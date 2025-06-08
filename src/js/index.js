@@ -1,3 +1,4 @@
 import "../styles/tailwind.scss";
 
-console.log("🐝 Bee Honey Landing loaded");
+import { Swiper, Navigation } from 'swiper';
+import 'swiper/css';
