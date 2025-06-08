@@ -8,20 +8,20 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        'bounce-slow': {
+        float: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-8px)' },
+          '50%':      { transform: 'translateY(-10px)' },
         },
       },
       animation: {
-        'bounce-slow': 'bounce-slow 3s ease-in-out infinite',
+        float: 'float 4s ease-in-out infinite',
       },
       colors: {
         amber: {
           400: "#F6C134",
           600: "#D39B17",
           700: "#AF7D0D",
-          800: "#8F630C", // texto aún más oscuro
+          800: "#8F630C",
         },
         honey: {
           light: "#FFFDF9",
@@ -32,6 +32,9 @@ module.exports = {
         },
         yellow: {
           700: "#B07A10",
+        },
+        gray: {
+          light: "#FBF8EF",
         },
       },
       fontFamily: {
