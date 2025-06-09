@@ -6,14 +6,6 @@ module.exports = {
     "./public/index.html"
   ],
   theme: {
-    container: {
-      center: true,
-      padding: '1.5rem',
-      screens: {
-        DEFAULT: '90%',
-        '2xl': '1500px',
-      },
-    },
     extend: {
       keyframes: {
         float: {
