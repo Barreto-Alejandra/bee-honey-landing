@@ -14,7 +14,7 @@
     padding-left: 0;
     padding-right: 0;
   }
-  .opacity-0 { opacity: 0; }
-  .translate-y-4 { transform: translateY(1rem); } 
-  .translate-y-0 { transform: translateY(0); }
+  .nav-link.is-active {
+    @apply text-amber-600;
+  }
 }
