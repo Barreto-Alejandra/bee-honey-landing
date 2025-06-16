@@ -11,27 +11,124 @@
   <link href="../dist/main.css" rel="stylesheet" />
 </head>
 <body class="bg-gray-light">
+
+  <header class="fixed top-0 left-0 w-full z-50 bg-white/90">
+    <div
+      class="container flex items-center 
+             justify-between md:justify-start md:space-x-8
+             py-4 px-6 lg:px-0"
+    >
+      <!-- Logo -->
+      <a href="./" class="font-heading text-2xl text-amber-700">BeeHoney</a>
+  
+      <!-- Toggle button (mobile) -->
+      <button
+        id="nav-toggle"
+        class="md:hidden text-black-800 focus:outline-none relative w-6 h-6"
+      >
+        <svg
+          id="icon-open"
+          class="absolute inset-0 w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg
+          id="icon-close"
+          class="absolute inset-0 w-6 h-6 hidden"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+  
+      <!-- Menú unificado -->
+      <nav
+        id="nav-menu"
+        class="absolute inset-x-0 top-full
+        bg-white/90 border-t border-black
+          overflow-hidden transition-[max-height] duration-300 ease-out
+          max-h-0
+          md:static md:inset-auto md:max-h-full
+          md:flex md:backdrop-blur-none
+          md:bg-transparent md:border-t-0 md:!ml-auto"
+      >
+        <ul class="w-[78%] mx-auto md:w-auto md:mx-0 md:flex">
+          <li>
+            <a href="#about"
+               class="nav-link block py-2 md:py-0 text-black-700 hover:text-amber-600"
+            >About</a>
+          </li>
+          <li>
+            <a href="#gallery"
+               class="nav-link block py-2 md:py-0 md:px-6 text-black-700 hover:text-amber-600"
+            >Gallery</a>
+          </li>
+          <li>
+            <a href="#faqs"
+               class="nav-link block py-2 md:py-0 md:px-6 text-black-700 hover:text-amber-600"
+            >Faqs</a>
+          </li>
+          <li>
+            <a href="#contact"
+               class="nav-link block py-2 md:py-0 md:px-6 text-black-700 hover:text-amber-600"
+            >Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <main>
 
-
-
-    <section class="relative flex flex-col justify-center items-center h-screen">
-
-      <div class="absolute inset-0">
-       
-      </div>
+    <section class="lazy-video relative w-full h-screen overflow-hidden">
+      <video
+        class="absolute inset-0 w-full h-full object-cover"
+        poster="/images/hero-poster.png"
+        muted
+        loop
+        playsinline
+        data-src="./images/hero-video.mp4"
+      ></video>
     
-      <div class="relative z-10 text-center px-6">
-        <h1 class="font-heading text-5xl md:text-6xl lg:text-7xl text-amber-700 mb-4">
-          Bee Honey
+      <div class="absolute inset-0 bg-black/40"></div>
+    
+      <div class="relative z-10 container flex flex-col items-center justify-center h-full text-center px-6">
+    
+        <h1 class="font-heading text-[clamp(32px,6vw,60px)] text-white leading-tight mb-4">
+          Lorem ipsum dolor sit amet,<br class="hidden sm:inline"/> consectetur adipiscing elit
         </h1>
-        <p class="text-body text-black-700 text-lg md:text-xl lg:text-2xl mb-6 max-w-2xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan, metus ultrices eleifend
-          gravida, nulla nunc varius lectus, nec rutrum justo nibh eu lectus.
+    
+        <p class="font-body text-[clamp(16px,2.5vw,20px)] text-white max-w-2xl mb-8">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <a href="#" class="inline-block bg-amber-600 text-white text-body text-base md:text-lg px-8 py-3 rounded-full shadow-lg hover:bg-amber-700 transition">
-          Shop Now
-        </a>
+    
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+          <a
+            href="#contact"
+            class="relative inline-block bg-amber-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg overflow-hidden
+                   hover:bg-amber-700 transition
+                   before:absolute before:inset-0 before:bg-white/20 before:opacity-0 before:transition-opacity before:duration-300
+                   hover:before:opacity-100"
+          >
+            Lorem ipsum dolor
+          </a>
+    
+          <a
+            href="#about"
+            class="inline-flex items-center text-white font-body hover:text-amber-300 transition"
+          >
+            Sit amet consectetur
+            <svg class="w-5 h-5 ml-2 animate-bounce" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 3v12m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -114,7 +211,7 @@
       </div>
     </section>
 
-    <section class="py-16">
+    <section id="faqs" class="py-16">
       <div class="container">
         <h2 class="font-heading text-title text-black-700 mb-8 text-center md:text-left">Some <span class="text-amber-600">FAQs</span></h2>
     
@@ -216,7 +313,7 @@
       </div>
     </section>
 
-    <section class="py-16">
+    <section id="contact" class="py-16">
       <div class="container overflow-hidden">
         <div class="grid grid-cols-1 md:grid-cols-[1fr_0.7fr] gap-10">
           <div class="h-64 md:h-auto">
@@ -257,7 +354,7 @@
   <footer class="container relative text-black-800 pt-16 pb-8 overflow-hidden">
     <div class="border-t border-black mt-8 pt-4 text-center">
       <p class="text-black-500 text-sm">
-        © 2025 Bee Honey. All rights reserved.
+        © 2025 Bee Honey.
       </p>
     </div>
   </footer>
@@ -265,3 +362,4 @@
 </body>
 <script src="../dist/bundle.js"></script>
 </html>
+
