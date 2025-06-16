@@ -18,10 +18,8 @@
              justify-between md:justify-start md:space-x-8
              py-4 px-6 lg:px-0"
     >
-      <!-- Logo -->
       <a href="./" class="font-heading text-2xl text-amber-700">BeeHoney</a>
   
-      <!-- Toggle button (mobile) -->
       <button
         id="nav-toggle"
         class="md:hidden text-black-800 focus:outline-none relative w-6 h-6"
@@ -48,7 +46,6 @@
         </svg>
       </button>
   
-      <!-- Menú unificado -->
       <nav
         id="nav-menu"
         class="absolute inset-x-0 top-full
@@ -110,7 +107,7 @@
     
         <div class="flex flex-col sm:flex-row items-center gap-4">
           <a
-            href="#contact"
+            href="#"
             class="relative inline-block bg-amber-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg overflow-hidden
                    hover:bg-amber-700 transition
                    before:absolute before:inset-0 before:bg-white/20 before:opacity-0 before:transition-opacity before:duration-300
@@ -132,8 +129,18 @@
       </div>
     </section>
 
-    <section class="py-16">
-      <div class="container lg:px-0">
+    <section id="about" class="py-20 bg-amber-50">
+      <div class="container px-6 lg:px-0 text-center space-y-6">
+        <h2 class="font-heading text-title text-black-800">
+          Our Story
+        </h2>
+        <p class="font-body text-body text-black-700 max-w-2xl mx-auto">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. 
+          Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis 
+          sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.
+        </p>
+      </div>
+      <div class="container lg:px-0 mt-20">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <div class="flex flex-col items-center p-12 bg-white rounded-lg shadow-md">
@@ -168,6 +175,7 @@
         </div>
       </div>
     </section>
+    
 
     <section id="gallery" class="relative py-16">
       <div class="container lg:px-0">

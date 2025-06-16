@@ -119,7 +119,6 @@ class LazyVideoLoader {
   }
 }
 
-
 class GallerySlider {
 
   constructor(containerSelector, paginationSelector, opts = {}) {
